@@ -16,7 +16,7 @@ namespace FitnessClubManagementAPI.Controllers
             _dbHelper = dbHelper;
         }
 
-        [HttpGet]
+        [HttpGet("ALL")]
         public IActionResult GetAllMembers()
         {
             var query = "SELECT * FROM Members";
@@ -38,7 +38,6 @@ namespace FitnessClubManagementAPI.Controllers
                 new SqlParameter("@SubscriptionEndDate", member.SubscriptionEndDate)
             };
             _dbHelper.ExecuteNonQuery(query, parameters);
-
             return Ok("Member added successfully.");
         }
     }
