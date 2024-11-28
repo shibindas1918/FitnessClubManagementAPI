@@ -1,0 +1,6 @@
+@FitnessClubManagementAPI_HostAddress = http://localhost:5197
+
+GET {{FitnessClubManagementAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
